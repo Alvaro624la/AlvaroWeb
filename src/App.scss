@@ -1,0 +1,334 @@
+// ------ Google Fonts ------ //
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// ------ SASS Variables ------ //
+$fontFamilyTitulos: 'Poiret One', cursive, Helvetica, sans-serif;
+$fontFamilyParrafos: Raleway, Helvetica, sans-serif;
+// $btncolor: linear-gradient(360deg, rgb(92, 208, 212), rgb(190, 248, 248));
+$btncolor: linear-gradient(360deg, #0e7ec9, #adcdec);
+$btnContactoColor: linear-gradient(360deg, #0e7ec9, #adcdec);
+$proyectoContainerWidthPC: 85%;
+$proyectoContainerWidthMobile: 90%;
+
+body{
+    font-size: 1em;
+    color: #000;
+    font-family: $fontFamilyParrafos;
+}
+
+// ------ INICIO ------ //
+.inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./img/bg2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    
+
+    &__nombrecompleto{
+        font-family: $fontFamilyTitulos;
+        font-size: 1.6em;
+        font-weight: 600;
+    }
+    &__fotoBnt-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 150px;
+    
+        &__fotoperfil{
+            width: 100%;
+            border-radius: 1em 1em 0 0;
+        }
+        &__botoncontacto{
+            width: 100%;
+            border: 0;
+            font-size: 1.1em;
+            background-color: rgb(152, 220, 230);
+            background: $btnContactoColor;
+            border-radius: 0 0 1em 1em;
+            padding: 0.75em;
+            cursor: pointer;
+            font-family: $fontFamilyTitulos;
+            font-weight: 600;
+
+            &:hover{
+                filter: saturate(1.5);
+            }
+            &:active{
+                filter: brightness(1.1);
+            }
+        }
+    }
+}
+.contactar-off{
+    z-index: -1;
+    position: fixed;
+    opacity: 0;
+
+    bottom: -35%;
+}
+.contactar-on{
+    height: 35%;
+
+    z-index: 999;
+    position: fixed;
+    bottom: 0%;
+    transition: bottom 0.5s ease-out;
+    width: 100%;
+    border-radius: 35px 35px 0 0;
+    background-color: rgba(255, 255, 255, 1); //fallback
+    background: $btncolor;
+    background-image: url('./img/z1.jpg');
+    background-size: cover;
+
+    border: 1px solid #000;
+    box-sizing: border-box;
+
+    &__btn-cerrar{
+        border-radius: 50%;
+        border: 0;
+        background-color: transparent;
+        color: rgb(153, 0, 0);
+        font-size: 2em;
+        font-weight: 600;
+        position: absolute;
+        top: 15px;
+        right: 18px;
+        cursor: pointer;
+
+        &:hover{
+            color: rgb(241, 0, 0);
+        }
+    }
+    &__redes-container{
+        padding: 3em 1em 1em 1em;
+        font-size: 1em;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        &__demas-rows{
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &__icons{
+                margin-right: 0.35em;
+                color: #000;
+                cursor: pointer;
+
+                &:hover{
+                    color: #1b1b1b;
+                }
+            }
+            &__p{
+                color: #000;
+                cursor: pointer;
+
+                &:hover{
+                    color: #1b1b1b;
+                }
+            }
+        }
+        &__last-rows{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            &__links{
+                font-size: 3em;
+                color: #000;
+                cursor: pointer;
+
+                &:hover{
+                    color: #1b1b1b;
+                }
+            }
+        }
+    }
+}
+// ------ CONOCIMIENTOS ------ //
+.conocimientos-cont{
+    padding: 2em 0;
+    background-image: url('./img/bg3.jpg');
+    // background: linear-gradient(180deg, #fff, #fff, #000);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+
+        &__icons{
+            font-size: 2em;
+        }
+        &__descriptions{
+            font-weight: 500;
+        }
+        // &__icons:nth-child(n){
+        //     font-size: 4em;
+        // }
+    }
+}
+// ------ PROYECTOS ------ //
+.proyectos{
+    &__proyecto-container{
+        background-image: url('./img/z1.jpg');
+        background-size: contain;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 0 2.5em 0;
+        
+        &__nombre{
+            width: $proyectoContainerWidthMobile;
+            text-align: start;
+            font-family: $fontFamilyParrafos;
+            font-weight: 600;
+        }
+        &__subnombre{
+            width: $proyectoContainerWidthMobile;
+            text-align: start;
+        }
+        &__cuadrado{
+            position: relative;
+            background-color: rgb(192, 192, 192);
+            width: $proyectoContainerWidthMobile;
+
+            &__img-a{
+                &__img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                    transition: 0.2s;
+
+                    &:hover{
+                        transform: scale(1.01);
+                        filter: contrast(1.15);
+                        transition: 0.2s;
+                        box-shadow: 3px 3px 5px #000;
+                    }
+                }
+            }
+            &__loexpandido{
+                padding: 1.6em;
+                overflow: hidden;
+                max-height: 0;
+                transition: all 0.4s;
+            }
+        }
+        &__btn{
+            display: block;
+            border: 0;
+            background-color: rgb(152, 220, 230);
+            background: $btncolor;
+            width: $proyectoContainerWidthMobile;
+            font-size: 2em;
+            display: flex;
+            place-content: center;
+            cursor: pointer;
+            padding: 0.50em 0;
+
+            &:hover{
+                filter: saturate(1.5);
+            }
+        }
+    }
+}
+.expandir{
+    padding: 1.6em;
+    max-height: 50em;
+    transition: all 2s;
+}
+.icon{
+    pointer-events: none;
+}
+
+//MEDIA QUERIES
+//extra-small devices (only if it's necessary)
+@media (max-width: 274px){
+    
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px){
+    body{
+        font-size: 1.2em;
+    }
+    // ------ INICIO ------ //
+    .inicio{
+        &__nombrecompleto{
+            font-size: 3em;
+        }
+        &__fotoperfil{
+            width: 300px;
+        }
+        &__botoncontacto{
+            width: 300px;
+        }
+    }
+    .contactar-on{
+        &__redes-container{
+            padding: 1em;
+            height: 90%;
+            font-size: 1em;
+    
+            &__demas-rows{
+                justify-content: center;
+            }
+        }
+    }
+    // ------ PROYECTOS ------ //
+    .proyectos{
+        &__proyecto-container{            
+            &__nombre{
+                width: $proyectoContainerWidthPC;
+            }
+            &__subnombre{
+                width: $proyectoContainerWidthPC;
+            }
+            &__cuadrado{
+                width: $proyectoContainerWidthPC;
+
+                &__loexpandido{
+                    padding: 2em;
+                }
+            }
+            &__btn{
+                width: $proyectoContainerWidthPC;
+                padding: 0.75em 0;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px){}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px){
+    // ------ INICIO ------ //
+    .contactar-on{
+        height: 27%;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px){}
