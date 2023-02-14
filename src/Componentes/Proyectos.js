@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { ContextoADPC } from './Contexto/Contexto';
-import { BsChevronExpand } from "react-icons/bs";
+import { VscFoldDown } from "react-icons/vsc";
 
 function Proyectos() {
     const {Proyectos} = useContext(ContextoADPC);
@@ -25,10 +25,10 @@ function Proyectos() {
                         </div>
                     </div>
                     <button className='proyectos__proyecto-container__btn' onClick={(e)=>{
-                        e.target.parentNode.childNodes[2].childNodes[1].classList.toggle('expandir');
+                        e.target.parentNode.childNodes[2].childNodes[1].classList.toggle('funcionExpandir');
+                        e.target.parentNode.childNodes[3].childNodes[0].classList.toggle('reactIconContraer');
                         }}>
-                            <BsChevronExpand className='icon'/>
-                            {/* ≡ */}
+                            {<VscFoldDown className='reactIconExpandir'/>}
                         </button>
                 </div>
             })

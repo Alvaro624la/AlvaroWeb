@@ -10,7 +10,7 @@ function Conocimientos() {
     <>
     <div className='conocimientos-cont'>
       {arr.map((e)=>{       
-        return <div className='conocimientos-cont__card'>
+        return <div key={`conocimientos-cont__card-${e[0]}`} className='conocimientos-cont__card'>
             <div key={`conocimientos-cont__card__logo-${e[0]}`} className='conocimientos-cont__card__icons'>{e[1].foto}</div>
             <div key={`conocimientos-cont__card__description-${e[0]}`} className='conocimientos-cont__card__descriptions'>{e[1].texto}</div>
           </div>

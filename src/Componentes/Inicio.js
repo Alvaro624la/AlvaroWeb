@@ -1,12 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { ContextoADPC } from './Contexto/Contexto';
-import fotoPerfil from '../img/fotoperfil.jpg';
+import fotoPerfil from '../img/fotoperfilEDIT2.png';
 import { FaLinkedin, FaGithubSquare, FaHome, FaPhoneAlt } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
+// import { VscPinned } from "react-icons/vsc";
+import { CgEditBlackPoint } from "react-icons/cg";
+import 'animate.css';
 function Inicio() {
   const {ADPC} = useContext(ContextoADPC);
 
   const [claseContactar, setClaseContactar] = useState('contactar-off');
+  const [textPoint1, setTextPoint1] = useState();
+  const [textPoint2, setTextPoint2] = useState();
+  const [textPoint3, setTextPoint3] = useState();
+
   return (
     <>
     <div className='inicio'>
@@ -36,6 +43,18 @@ function Inicio() {
           </div>
         </div>
       </div>
+      <CgEditBlackPoint className='infoPoint-1 animate__animated animate__flip animate__delay-1s' 
+      onMouseOver={()=>setTextPoint1(<p className='infoPoint-1__text'>+2 años de experiencia</p>)} 
+      onMouseLeave={()=>setTextPoint1('')}/>
+      {textPoint1}
+      <CgEditBlackPoint className='infoPoint-2 animate__animated animate__flip animate__delay-1.5s' 
+      onMouseOver={()=>setTextPoint2(<p className='infoPoint-2__text'>React, Git y más</p>)} 
+      onMouseLeave={()=>setTextPoint2('')}/>
+      {textPoint2}
+      <CgEditBlackPoint className='infoPoint-3 animate__animated animate__flip animate__delay-2s' 
+      onMouseOver={()=>setTextPoint3(<p className='infoPoint-3__text'>Disponibilidad</p>)} 
+      onMouseLeave={()=>setTextPoint3('')}/>
+      {textPoint3}
     </div>
     </>
   )
