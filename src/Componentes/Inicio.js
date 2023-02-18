@@ -3,16 +3,38 @@ import { ContextoADPC } from './Contexto/Contexto';
 import fotoPerfil from '../img/fotoperfilEDIT2.png';
 import { FaLinkedin, FaGithubSquare, FaHome, FaPhoneAlt } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
-// import { VscPinned } from "react-icons/vsc";
 import { CgEditBlackPoint } from "react-icons/cg";
 import 'animate.css';
+import Nube1 from '../img/cloud1.png';
+import Nube4 from '../img/cloud4.png';
+import Nube3 from '../img/cloud3.png';
 function Inicio() {
   const {ADPC} = useContext(ContextoADPC);
 
   const [claseContactar, setClaseContactar] = useState('contactar-off');
+
   const [textPoint1, setTextPoint1] = useState();
   const [textPoint2, setTextPoint2] = useState();
   const [textPoint3, setTextPoint3] = useState();
+
+  const [scrollPosition, setScrollPosition] = useState(window.scrollY);
+  const [numBaseScroll] = useState(0);
+  const [difIncrementada, setDifIncrementada] = useState();
+  const [numBaseOpacity] = useState(1);
+  const [opacityNumber, setOpacityNumber] = useState();
+
+  window.addEventListener('scroll', () => {
+    setScrollPosition(window.scrollY); // 200 está el scroll
+    setDifIncrementada(scrollPosition-numBaseScroll); // 200 (0-200) es la diferencia
+    setOpacityNumber(numBaseOpacity-(difIncrementada*(1/300))); // 0.332 será la opacidad correcta
+    if(window.scrollY < 10) setOpacityNumber(1); // asegurar la opacidad 1 arriba del todo de la página
+    if(window.scrollY > 300) setOpacityNumber(0); // asegurar la opacidad 0 cuando scrollY sea 300
+    
+    // quitar etiquetas cuando me desplazo o muevo
+    setTextPoint1('');
+    setTextPoint2('');
+    setTextPoint3('');
+  });
 
   return (
     <>
@@ -43,21 +65,35 @@ function Inicio() {
           </div>
         </div>
       </div>
-      <CgEditBlackPoint className='infoPoint-1 animate__animated animate__flip animate__delay-1s' 
-      onMouseOver={()=>setTextPoint1(<p className='infoPoint-1__text'>+2 años de experiencia</p>)} 
-      onMouseLeave={()=>setTextPoint1('')}/>
+      <CgEditBlackPoint style={{opacity: opacityNumber}} className='infoPoint-1 animate__animated animate__flip animate__delay-1s' 
+      onMouseOver={()=>setTextPoint1(<p style={{opacity: opacityNumber}} className='infoPoint-1__text'>+2 años de experiencia</p>)} 
+      onMouseLeave={()=>{setTextPoint1('');}}/>
       {textPoint1}
-      <CgEditBlackPoint className='infoPoint-2 animate__animated animate__flip animate__delay-1.5s' 
-      onMouseOver={()=>setTextPoint2(<p className='infoPoint-2__text'>React, Git y más</p>)} 
+      <CgEditBlackPoint style={{opacity: opacityNumber}} className='infoPoint-2 animate__animated animate__flip animate__delay-1.5s' 
+      onMouseOver={()=>setTextPoint2(<p style={{opacity: opacityNumber}} className='infoPoint-2__text'>React, Git y más</p>)} 
       onMouseLeave={()=>setTextPoint2('')}/>
       {textPoint2}
-      <CgEditBlackPoint className='infoPoint-3 animate__animated animate__flip animate__delay-2s' 
-      onMouseOver={()=>setTextPoint3(<p className='infoPoint-3__text'>Disponibilidad</p>)} 
+      <CgEditBlackPoint style={{opacity: opacityNumber}} className='infoPoint-3 animate__animated animate__flip animate__delay-2s' 
+      onMouseOver={()=>setTextPoint3(<p style={{opacity: opacityNumber}} className='infoPoint-3__text'>Disponibilidad</p>)} 
       onMouseLeave={()=>setTextPoint3('')}/>
       {textPoint3}
+      <div className='nube1-cont' style={{opacity: opacityNumber}}>
+        <img src={Nube1} className='nube2-cont__img' alt='nube 1 png'/>
+        <p className='nube2-cont__texto'>+2 años de experiencia</p>
+      </div>
+      <div className='nube2-cont' style={{opacity: opacityNumber}}>
+        <img src={Nube4} className='nube2-cont__img' alt='nube 2 png'/>
+        <p className='nube2-cont__texto'>React, Git y más</p>
+      </div>
+      <div className='nube3-cont' style={{opacity: opacityNumber}}>
+        <img src={Nube3} className='nube2-cont__img' alt='nube 3 png'/>
+        <p className='nube2-cont__texto'>Disponibilidad</p>
+      </div>
     </div>
     </>
   )
 }
 
 export default Inicio 
+
+//cada scroll da un numero, cuando bajo, ese numero cambia progresivamente, ya sea en aumento o en disminución. Tengo que utilizar ese numero para cambiar el width total del div de los puntos en las montañas

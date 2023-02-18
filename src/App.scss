@@ -16,26 +16,83 @@ body{
     color: #000;
     font-family: $fontFamilyParrafos;
 }
+// ------ APP.JS (boton up scroll to 0) ------ //
+.scroll-up {
+    position: fixed;
+    z-index: 999;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border: 5px solid #0e7ec9;
+    border-radius: 50%;
+    bottom: 20px;
+    right: -100px;
+    box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%);
+    transition: right .4s ease-in;
+    cursor: pointer;
 
+    &:hover{
+        transform: scale(1.025);
+        transition: all .1s;
+        filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.8));
+    }
+    &:active{
+        transform: scale(0.95);
+        transition: all .1s;
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.8));
+    }
+
+    &__stick::after{
+        content: "";
+        border: 1px solid #095b92;
+        border-width: 10px 3px;
+        border-radius: 0 0 3px 3px;
+        position: relative;
+        top: 26px;
+        left: 32px;
+    }
+    &__arrow::after{
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 0;
+        height: 0;
+        border-width: 0 15px 15px;
+        border-style: solid;
+        // border-color: transparent transparent #dfaf5e;
+        border-color: transparent transparent #095b92;
+    }
+}
+.scroll-up-in {
+    right: 20px;
+    transition: right 0.4s;
+}
 // ------ INICIO ------ //
 .inicio{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
     background: linear-gradient(180deg, #525252, #255fa7);
     background-image: url('./img/bg2.jpg');
     background-size: cover;
-    background-attachment: fixed;
     background-position: 50% 50%;
 
+    //para fijar fondo para puntos y nubes verse bien (1090 x 726):
+    // height: 100vh;
+    // background-attachment: fixed;
+    height: 726px;
+
     &__nombrecompleto{
+        z-index: 1; // para jugar con NUBES
         font-family: $fontFamilyTitulos;
         font-size: 1.6em;
         font-weight: 600;
     }
     &__fotoBnt-cont{
+        z-index: 2;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -84,7 +141,7 @@ body{
     background: $btncolor;
     background-image: url('./img/z1.jpg');
     background-size: cover;
-
+    opacity: 0.95;
     border: 1px solid #000;
     box-sizing: border-box;
 
@@ -160,8 +217,6 @@ body{
     top: 250px;
     margin-right: -195px;
     transition: transform 0.8s;
-    // animation: animate__animated animate__heartBeat;
-    // animation-duration: 2s;
 
     &:hover{
         transform: scale(1.4);
@@ -178,6 +233,7 @@ body{
         font-size: 1em;
         font-weight: 500;
         color: #000;
+        position: fixed;
     }
 }
 .infoPoint-2{
@@ -201,6 +257,7 @@ body{
         font-size: 1em;
         font-weight: 500;
         color: #000;
+        position: fixed;
     }
 }
 .infoPoint-3{
@@ -224,9 +281,12 @@ body{
         font-size: 1em;
         font-weight: 500;
         color: #000;
+        position: fixed;
     }
 }
-
+.nube1-cont, .nube2-cont, .nube3-cont{
+    display: none;
+}
 // ------ CONOCIMIENTOS ------ //
 .conocimientos-cont{
     padding: 2em 0;
@@ -463,6 +523,51 @@ body{
     }
     .infoPoint-3{
         display: none;
+    }
+
+    .nube1-cont, .nube2-cont, .nube3-cont{
+        // border: red 1px solid;
+        display: block;
+        position: fixed;
+        height: 110px;
+        animation: nubes 10s infinite;
+    
+        &__img{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &__texto{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1em;
+        }
+    }
+    .nube1-cont{
+        z-index: 3;
+        width: 270px;
+        top: 17px;
+        margin-right: -500px;
+        animation-delay: .7s;
+    }
+    .nube2-cont{
+        z-index: 0;
+        width: 320px;
+        top: 155px;
+        margin-right: 80px;
+        animation-delay: 1.7s;
+    }
+    .nube3-cont{
+        z-index: 3;
+        width: 250px;
+        top: 70px;
+        margin-right: 755px;
+    }
+    @keyframes nubes {
+        50%{transform: translateX(30px)}
     }
 }
 
