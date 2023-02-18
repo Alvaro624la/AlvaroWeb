@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/AlvaroWeb/static/css/main.777119f8.css",
+    "main.js": "/AlvaroWeb/static/js/main.ef3f8ed7.js",
+    "static/js/787.103a8f18.chunk.js": "/AlvaroWeb/static/js/787.103a8f18.chunk.js",
+    "static/media/z4.jpg": "/AlvaroWeb/static/media/z4.0c0e6d396e5362670e19.jpg",
+    "static/media/z1.jpg": "/AlvaroWeb/static/media/z1.88d55c4b1bb57fb3b677.jpg",
+    "static/media/fotoperfilEDIT2.png": "/AlvaroWeb/static/media/fotoperfilEDIT2.cc00ea2c738305f1df2b.png",
+    "static/media/bg2.jpg": "/AlvaroWeb/static/media/bg2.6194a1aabe516037e67c.jpg",
+    "static/media/proyecto-portfolio.jpg": "/AlvaroWeb/static/media/proyecto-portfolio.ec0983a16d8ab8e98f85.jpg",
+    "static/media/proyecto-metjs.jpg": "/AlvaroWeb/static/media/proyecto-metjs.78ed46c917e6f90bf42e.jpg",
+    "static/media/proyecto-photographer.jpg": "/AlvaroWeb/static/media/proyecto-photographer.bb511106b5dd4ecbf9a1.jpg",
+    "static/media/proyecto-vallulis.jpg": "/AlvaroWeb/static/media/proyecto-vallulis.f1036e6ee7cfc059cd5c.jpg",
+    "static/media/cloud1.png": "/AlvaroWeb/static/media/cloud1.b83229b4bcca6fa73bcd.png",
+    "static/media/proyecto-dd.jpg": "/AlvaroWeb/static/media/proyecto-dd.cc2adbe83f7a4eafcacf.jpg",
+    "static/media/cloud3.png": "/AlvaroWeb/static/media/cloud3.3fa478deb97391e7b9dc.png",
+    "static/media/cloud4.png": "/AlvaroWeb/static/media/cloud4.ca9c5e7392a083f033fb.png",
+    "index.html": "/AlvaroWeb/index.html",
+    "main.777119f8.css.map": "/AlvaroWeb/static/css/main.777119f8.css.map",
+    "main.ef3f8ed7.js.map": "/AlvaroWeb/static/js/main.ef3f8ed7.js.map",
+    "787.103a8f18.chunk.js.map": "/AlvaroWeb/static/js/787.103a8f18.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.777119f8.css",
+    "static/js/main.ef3f8ed7.js"
+  ]
+}
