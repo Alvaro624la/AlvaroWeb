@@ -95,5 +95,3 @@ function Inicio() {
 }
 
 export default Inicio 
-
-//cada scroll da un numero, cuando bajo, ese numero cambia progresivamente, ya sea en aumento o en disminución. Tengo que utilizar ese numero para cambiar el width total del div de los puntos en las montañas
