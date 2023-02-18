@@ -138,10 +138,9 @@ body{
     transition: bottom 0.5s ease-out;
     width: 100%;
     border-radius: 35px 35px 0 0;
-    background: $btncolor;
-    background-image: url('./img/z1.jpg');
+    background: linear-gradient(90deg, #0e7ec9, #adcdec, #0e7ec9);
+    // background-image: url('./img/z1.jpg');
     background-size: cover;
-    opacity: 0.95;
     border: 1px solid #000;
     box-sizing: border-box;
 
@@ -212,7 +211,7 @@ body{
     }
 }
 .infoPoint-1{
-    position: fixed;
+    position: absolute;
     font-size: 1.4em;
     top: 250px;
     margin-right: -195px;
@@ -233,11 +232,10 @@ body{
         font-size: 1em;
         font-weight: 500;
         color: #000;
-        position: fixed;
     }
 }
 .infoPoint-2{
-    position: fixed;
+    position: absolute;
     font-size: 1.6em;
     top: 240px;
     margin-right: 180px;
@@ -257,11 +255,10 @@ body{
         font-size: 1em;
         font-weight: 500;
         color: #000;
-        position: fixed;
     }
 }
 .infoPoint-3{
-    position: fixed;
+    position: absolute;
     font-size: 1.8em;
     top: 350px;
     margin-right: 115px;
@@ -281,7 +278,6 @@ body{
         font-size: 1em;
         font-weight: 500;
         color: #000;
-        position: fixed;
     }
 }
 .nube1-cont, .nube2-cont, .nube3-cont{
@@ -527,7 +523,7 @@ body{
     .nube1-cont, .nube2-cont, .nube3-cont{
         // border: red 1px solid;
         display: block;
-        position: fixed;
+        position: absolute;
         height: 110px;
         animation: nubes 10s infinite;
     

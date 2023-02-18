@@ -31,9 +31,9 @@ function Inicio() {
     if(window.scrollY > 300) setOpacityNumber(0); // asegurar la opacidad 0 cuando scrollY sea 300
     
     // quitar etiquetas cuando me desplazo o muevo
-    setTextPoint1('');
-    setTextPoint2('');
-    setTextPoint3('');
+    // setTextPoint1('');
+    // setTextPoint2('');
+    // setTextPoint3('');
   });
 
   return (
