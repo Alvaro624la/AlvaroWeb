@@ -5,6 +5,7 @@ import Inicio from './Componentes/Inicio';
 import Conocimientos from './Componentes/Conocimientos';
 import Proyectos from './Componentes/Proyectos';
 import ContextoADPC from './Componentes/Contexto/Contexto';
+import Certificaciones from './Componentes/Certificaciones';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Inicio/>
         <Conocimientos/>
         <Proyectos/>
+        <Certificaciones/>
       </ContextoADPC>
       <aside id="scroll-up-btn" className={claseBtnUpScroll} onClick={()=>window.scroll(0, 0)}>
         <div className="scroll-up__stick"></div>

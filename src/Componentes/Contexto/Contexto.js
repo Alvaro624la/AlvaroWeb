@@ -106,9 +106,21 @@ const Contexto = (props) => {
         },
     });
 
+    const [Certificaciones] = useState({
+        htmlCss:{
+            fcc: 'https://freecodecamp.org/certification/Alvaro624la/responsive-web-design',
+            ob: 'https://storage.googleapis.com/openvitae-prod/diplomas%2Fe33fec29-18b7-41ad-bcbe-f694288e9153.pdf',
+        },
+        js:{
+            fcc: 'https://www.freecodecamp.org/certification/Alvaro624la/javascript-algorithms-and-data-structures',
+            ob: 'https://storage.googleapis.com/openvitae-prod/diplomas%2Fdb862ba3-0cf1-4491-b4a1-8b1890a53716.pdf',
+        },
+        git: 'https://storage.googleapis.com/openvitae-prod/diplomas%2F6f66f0bb-7dc5-42f9-a27f-163171661226.pdf'
+    });
+
     return (
         <>
-        <ContextoADPC.Provider value={{ADPC, Conocimientos, Proyectos}}>
+        <ContextoADPC.Provider value={{ADPC, Conocimientos, Proyectos, Certificaciones}}>
             {props.children}
         </ContextoADPC.Provider>
         </>
