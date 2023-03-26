@@ -5,7 +5,7 @@ import fotoProyectoDD from '../../img/proyecto-dd.jpg';
 import fotoProyectoPhotographer from '../../img/proyecto-photographer.jpg';
 import fotoProyectoPortfolio from '../../img/proyecto-portfolio.jpg';
 import { FaGitAlt, FaJs, FaHtml5, FaCss3Alt, FaReact, FaWordpress, FaSass } from "react-icons/fa";
-import { SiWebpack, SiBabel } from "react-icons/si";
+import { SiWebpack, SiBabel, SiVite } from "react-icons/si";
 
 export const ContextoADPC = React.createContext();
 
@@ -29,38 +29,38 @@ const Contexto = (props) => {
             foto: <FaCss3Alt/>,
             texto: 'CSS 3',
         },
-        3: {
+        9: {
             foto: <FaSass/>,
             texto: 'Sass',
         },
-        4: {
+        3: {
             foto: <FaJs/>,
             texto: 'JS',
         },
-        5: {
+        8: {
             foto: <SiBabel/>,
             texto: 'Babel',
         },
-        6: {
+        7: {
             foto: <SiWebpack/>,
             texto: 'Webpack',
         },
-        7: {
+        4: {
             foto: <FaReact/>,
             texto: 'REACT',
         },
-        8: {
+        5: {
             foto: <FaGitAlt/>,
             texto: 'GIT',
         },
-        9: {
+        10: {
             foto: <FaWordpress/>,
             texto: 'Wordpress',
         },
-        // 10: {
-        //     foto: `${}`,
-        //     texto: '',
-        // },
+        6: {
+            foto: <SiVite/>,
+            texto: 'Vite',
+        },
     });
 
     const [Proyectos] = useState({
