@@ -3,6 +3,7 @@ import fotoProyectoVallulis from '../../img/proyecto-vallulis.jpg';
 import fotoProyectoMetJS from '../../img/proyecto-metjs.jpg';
 import fotoProyectoDD from '../../img/proyecto-dd.jpg';
 import fotoProyectoPhotographer from '../../img/proyecto-photographer.jpg';
+import fotoProyectoVoice from '../../img/proyecto-voice.jpg'
 import fotoProyectoPortfolio from '../../img/proyecto-portfolio.jpg';
 import { FaGitAlt, FaJs, FaHtml5, FaCss3Alt, FaReact, FaWordpress, FaSass } from "react-icons/fa";
 import { SiWebpack, SiBabel, SiVite } from "react-icons/si";
@@ -70,7 +71,7 @@ const Contexto = (props) => {
             nombre: 'Miguel Angel de Vallulis',
             subnombre: 'Página web oficial de artista/cantante profesional',
             descripcion: 'Creación de una página web profesional desde 0, y gestionando no solo la parte como desarrollador, sino también, la creación del dominio, el hosting y demás cosas necesarias para su correcto funcionamiento y puesta en marcha.',
-            lenguaje: 'React'
+            lenguaje: 'React + Vite'
         },
         metjs: {
             url: 'https://alvaro624la.github.io/MetJS/',
@@ -96,12 +97,20 @@ const Contexto = (props) => {
             descripcion: 'És un página de prueba para una artista dedicada a la fotografia, que quiere usar la web para mostrar sus trabajos y su información de contacto. Y que en un futuro va a tener una tienda funcional donde los clientes puedan comprar su obras.',
             lenguaje: 'JavaScript'
         },
+        voicecolorchanger: {
+            url: 'https://alvaro624la.github.io/Voice-ColorChanger/',
+            img: `${fotoProyectoVoice}`,
+            nombre: 'Funny Voice Color Changer',
+            subnombre: 'App de reconocimiento de voz y texto',
+            descripcion: 'Utilizando el hook SpeechRecognition sumado a unas cuantas funciones en JavaScript, e aquí una app de detección de voz y texto en inglés, para cambiar el color del fondo. Tiene ciertas características que lo hace dinámico y entretenido. ¡Puedes clicar al link y probarlas tú mismo! (No abrir en navegador Opera)',
+            lenguaje: 'React + Vite'
+        },
         antiguoportfolio: {
             url: 'https://alvaro624la.github.io/Portfolio/',
             img: `${fotoProyectoPortfolio}`,
             nombre: 'AdP Portfolio',
             subnombre: 'Antiguo portfolio personal',
-            descripcion: 'Mi portfolio, anterior a éste donde se encuentra actualmente.',
+            descripcion: 'Mi antiguo y primer portfolio. Está desactualizado y no sirve, pero me gusta tenerlo para el recuerdo',
             lenguaje: 'JavaScript'
         },
     });
