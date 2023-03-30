@@ -102,7 +102,7 @@ const Contexto = (props) => {
             img: `${fotoProyectoVoice}`,
             nombre: 'Funny Voice Color Changer',
             subnombre: 'App de reconocimiento de voz y texto',
-            descripcion: 'Utilizando el hook SpeechRecognition sumado a unas cuantas funciones en JavaScript, e aquí una app de detección de voz y texto en inglés, para cambiar el color del fondo. Tiene ciertas características que lo hace dinámico y entretenido. ¡Puedes clicar al link y probarlas tú mismo! (No abrir en navegador Opera)',
+            descripcion: 'Utilizando el hook SpeechRecognition sumado a unas cuantas funciones en JavaScript, he aquí una app de detección de voz y texto en inglés, para cambiar el color del fondo. Tiene ciertas características que lo hace dinámico y entretenido. ¡Puedes clicar al link y probarlas tú mismo! (No abrir en navegador Opera)',
             lenguaje: 'React + Vite'
         },
         antiguoportfolio: {
