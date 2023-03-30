@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AlvaroWeb/static/css/main.67d2ca02.css",
-    "main.js": "/AlvaroWeb/static/js/main.0caacb4e.js",
+    "main.js": "/AlvaroWeb/static/js/main.0bb1e0c8.js",
     "static/js/787.103a8f18.chunk.js": "/AlvaroWeb/static/js/787.103a8f18.chunk.js",
     "static/media/z4.jpg": "/AlvaroWeb/static/media/z4.0c0e6d396e5362670e19.jpg",
     "static/media/headerbg6.jpg": "/AlvaroWeb/static/media/headerbg6.3d71718baeba68b6f5ef.jpg",
@@ -13,15 +13,16 @@
     "static/media/proyecto-vallulis.jpg": "/AlvaroWeb/static/media/proyecto-vallulis.f1036e6ee7cfc059cd5c.jpg",
     "static/media/cloud1.png": "/AlvaroWeb/static/media/cloud1.b83229b4bcca6fa73bcd.png",
     "static/media/proyecto-dd.jpg": "/AlvaroWeb/static/media/proyecto-dd.cc2adbe83f7a4eafcacf.jpg",
+    "static/media/proyecto-voice.jpg": "/AlvaroWeb/static/media/proyecto-voice.1c138f3ba66210d2afd4.jpg",
     "static/media/cloud3.png": "/AlvaroWeb/static/media/cloud3.3fa478deb97391e7b9dc.png",
     "static/media/cloud4.png": "/AlvaroWeb/static/media/cloud4.ca9c5e7392a083f033fb.png",
     "index.html": "/AlvaroWeb/index.html",
     "main.67d2ca02.css.map": "/AlvaroWeb/static/css/main.67d2ca02.css.map",
-    "main.0caacb4e.js.map": "/AlvaroWeb/static/js/main.0caacb4e.js.map",
+    "main.0bb1e0c8.js.map": "/AlvaroWeb/static/js/main.0bb1e0c8.js.map",
     "787.103a8f18.chunk.js.map": "/AlvaroWeb/static/js/787.103a8f18.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.67d2ca02.css",
-    "static/js/main.0caacb4e.js"
+    "static/js/main.0bb1e0c8.js"
   ]
 }
