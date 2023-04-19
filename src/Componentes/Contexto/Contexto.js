@@ -7,6 +7,7 @@ import fotoProyectoVoice from '../../img/proyecto-voice.jpg'
 import fotoProyectoPortfolio from '../../img/proyecto-portfolio.jpg';
 import { FaGitAlt, FaJs, FaHtml5, FaCss3Alt, FaReact, FaWordpress, FaSass } from "react-icons/fa";
 import { SiWebpack, SiBabel, SiVite } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
 
 export const ContextoADPC = React.createContext();
 
@@ -54,13 +55,17 @@ const Contexto = (props) => {
             foto: <FaGitAlt/>,
             texto: 'GIT',
         },
-        10: {
+        11: {
             foto: <FaWordpress/>,
             texto: 'Wordpress',
         },
         6: {
             foto: <SiVite/>,
-            texto: 'Vite',
+            texto: 'Vite',GrMysql
+        },
+        10: {
+            foto: <GrMysql/>,
+            texto: 'MySQL',
         },
     });
 
