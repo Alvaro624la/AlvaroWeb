@@ -42,7 +42,7 @@ function Inicio() {
       <h1 className='inicio__nombrecompleto'>{ADPC.nombrecompleto}</h1>
       <div className='inicio__fotoBnt-cont'>
         <img className='inicio__fotoBnt-cont__fotoperfil' src={fotoPerfil} alt='foto de perfil de Álvaro de Prado'/>
-        <button className='inicio__fotoBnt-cont__botoncontacto' onClick={()=> claseContactar === 'contactar-off' ? setClaseContactar('contactar-on') : setClaseContactar('contactar-off')}>Contactar</button>
+        <button className='inicio__fotoBnt-cont__botoncontacto' aria-label="my-btn" onClick={()=> claseContactar === 'contactar-off' ? setClaseContactar('contactar-on') : setClaseContactar('contactar-off')}>Contactar</button>
       </div>
       <div className={claseContactar}>
         <button className='contactar-on__btn-cerrar' onClick={()=>setClaseContactar('contactar-off')}>X</button>

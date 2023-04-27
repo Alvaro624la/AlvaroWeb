@@ -18,7 +18,7 @@ const Contexto = (props) => {
         lugar: 'Santa Perpetua de Mogoda',
         telefono: '628 25 17 20',
         email: 'alvarodepradotrabajo@gmail.com',
-        linkedin: 'https://www.linkedin.com/in/álvaro-de-prado-calle-740062221/',
+        linkedin: 'https://www.linkedin.com/in/alvaro-de-prado/',
         github: 'https://github.com/Alvaro624la',
     });
 
