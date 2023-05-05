@@ -102,14 +102,14 @@ const Contexto = (props) => {
             descripcion: 'És un página de prueba para una artista dedicada a la fotografia, que quiere usar la web para mostrar sus trabajos y su información de contacto. Y que en un futuro va a tener una tienda funcional donde los clientes puedan comprar su obras.',
             lenguaje: 'JavaScript'
         },
-        voicecolorchanger: {
-            url: 'https://alvaro624la.github.io/Voice-ColorChanger/',
-            img: `${fotoProyectoVoice}`,
-            nombre: 'Funny Voice Color Changer',
-            subnombre: 'App de reconocimiento de voz y texto',
-            descripcion: 'Utilizando el hook SpeechRecognition sumado a unas cuantas funciones en JavaScript, he aquí una app de detección de voz y texto en inglés, para cambiar el color del fondo. Tiene ciertas características que lo hace dinámico y entretenido. ¡Puedes clicar al link y probarlas tú mismo! (No abrir en navegador Opera)',
-            lenguaje: 'React + Vite'
-        },
+        // voicecolorchanger: {
+        //     url: 'https://alvaro624la.github.io/Voice-ColorChanger/',
+        //     img: `${fotoProyectoVoice}`,
+        //     nombre: 'Funny Voice Color Changer',
+        //     subnombre: 'App de reconocimiento de voz y texto',
+        //     descripcion: 'Utilizando el hook SpeechRecognition sumado a unas cuantas funciones en JavaScript, he aquí una app de detección de voz y texto en inglés, para cambiar el color del fondo. Tiene ciertas características que lo hace dinámico y entretenido. ¡Puedes clicar al link y probarlas tú mismo! (No abrir en navegador Opera)',
+        //     lenguaje: 'React + Vite'
+        // },
         antiguoportfolio: {
             url: 'https://alvaro624la.github.io/Portfolio/',
             img: `${fotoProyectoPortfolio}`,
